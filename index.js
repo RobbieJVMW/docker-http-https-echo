@@ -58,6 +58,7 @@ const sslOpts = {
 
 http.createServer(app).listen(80);
 https.createServer(sslOpts,app).listen(443);
+console.log('-- Server Listening --')
 
 let calledClose = false;
 

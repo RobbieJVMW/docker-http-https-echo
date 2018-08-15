@@ -1,12 +1,13 @@
-FROM node:9.2-alpine
+FROM node:alpine
 
 WORKDIR /app
 
 COPY . .
 
+
 RUN rm -rf screenshots/
 
-RUN npm install --production
+RUN npm install -g --production
 
 RUN apk --no-cache add openssl
 
